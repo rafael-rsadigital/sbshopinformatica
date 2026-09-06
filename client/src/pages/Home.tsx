@@ -79,7 +79,7 @@ export default function Home() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#inicio" aria-label="SB Shop Informática — início">
-            <img src="/manus-storage/sb-shop-mark_313f95d3.png" alt="" className="brand-mark" />
+            <span className="brand-mark" aria-hidden="true">SB</span>
             <span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span>
           </a>
           <button className="menu-toggle" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}>
@@ -114,7 +114,7 @@ export default function Home() {
             </div>
             <div className="hero-visual">
               <div className="hero-photo-frame">
-                <img src="/manus-storage/sb-shop-hero-workbench_cff4de1b.png" alt="Bancada organizada para manutenção de um notebook" />
+                <img src="/images/sb-shop-hero-workbench.webp" alt="Bancada organizada para manutenção de um notebook" width="1280" height="720" fetchPriority="high" />
                 <div className="photo-caption"><span>NA BANCADA</span><strong>Precisão que acolhe.</strong></div>
               </div>
               <div className="rating-stamp" aria-label="4,7 de 5 estrelas em 110 avaliações no Google">
@@ -154,7 +154,7 @@ export default function Home() {
 
         <section className="feature-section">
           <div className="container feature-grid">
-            <div className="feature-image"><img src="/manus-storage/sb-shop-product-laptop_d03ee8d2.png" alt="Notebook revisado sobre bancada de assistência técnica" /><span className="image-tag">REVISADO / TESTADO</span></div>
+            <div className="feature-image"><img src="/images/sb-shop-product-laptop.webp" alt="Notebook revisado sobre bancada de assistência técnica" width="800" height="600" loading="lazy" /><span className="image-tag">REVISADO / TESTADO</span></div>
             <div className="feature-copy"><span className="section-label">TAMBÉM TEMOS</span><h2>Tecnologia usada pode ser uma escolha <em>inteligente.</em></h2><p>Quando há notebooks revisados disponíveis, você recebe informação sobre a condição do equipamento, orientação para escolher e um caminho de compra mais tranquilo.</p><div className="feature-list"><span><ShieldCheck size={18} /> Estado explicado com honestidade</span><span><Cpu size={18} /> Configuração para a sua necessidade</span><span><Check size={18} /> Garantia e condições informadas</span></div><a className="button button-dark" href={whatsappUrl}>Consultar disponibilidade <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
@@ -174,7 +174,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-inner"><div className="brand footer-brand"><img src="/manus-storage/sb-shop-mark_313f95d3.png" alt="" className="brand-mark" /><span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span></div><div className="footer-meta"><span><Clock3 size={14} /> Seg a sex · 08:30 às 17:30</span><a href="https://www.instagram.com/sb_shopinformatica/" target="_blank" rel="noreferrer"><Instagram size={15} /> @sb_shopinformatica</a></div><span className="footer-note">Feito para a rotina voltar a funcionar.</span></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><div className="brand footer-brand"><span className="brand-mark" aria-hidden="true">SB</span><span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span></div><div className="footer-meta"><span><Clock3 size={14} /> Seg a sex · 08:30 às 17:30</span><a href="https://www.instagram.com/sb_shopinformatica/" target="_blank" rel="noreferrer"><Instagram size={15} /> @sb_shopinformatica</a></div><span className="footer-note">Feito para a rotina voltar a funcionar.</span></div></footer>
       <a className="mobile-cta" href={whatsappUrl}><MessageCircle size={18} /> Pedir orçamento</a>
     </div>
   );
