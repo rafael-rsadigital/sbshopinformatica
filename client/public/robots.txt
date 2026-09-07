@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sbshopinformatica.com.br/sitemap.xml
+Sitemap: https://sbshopinformatica.vercel.app/sitemap.xml
