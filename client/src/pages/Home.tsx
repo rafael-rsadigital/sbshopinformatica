@@ -79,8 +79,7 @@ export default function Home() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#inicio" aria-label="SB Shop Informática — início">
-            <span className="brand-mark" aria-hidden="true">SB</span>
-            <span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span>
+            <img className="brand-logo" src="/images/logotipo-fundo-transparente.png" alt="SB Shop Informática" width="56" height="56" />
           </a>
           <button className="menu-toggle" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}>
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -174,7 +173,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-inner"><div className="brand footer-brand"><span className="brand-mark" aria-hidden="true">SB</span><span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span></div><div className="footer-meta"><span><Clock3 size={14} /> Seg a sex · 08:30 às 17:30</span><a href="https://www.instagram.com/sb_shopinformatica/" target="_blank" rel="noreferrer"><Instagram size={15} /> @sb_shopinformatica</a></div><span className="footer-note">Feito para a rotina voltar a funcionar.</span></div></footer>
+      <footer className="site-footer"><div className="container footer-inner"><div className="brand footer-brand"><img className="brand-logo" src="/images/logotipo-fundo-transparente.png" alt="SB Shop Informática" width="52" height="52" /></div><div className="footer-meta"><span><Clock3 size={14} /> Seg a sex · 08:30 às 17:30</span><a href="https://www.instagram.com/sb_shopinformatica/" target="_blank" rel="noreferrer"><Instagram size={15} /> @sb_shopinformatica</a></div><span className="footer-note">Feito para a rotina voltar a funcionar.</span></div></footer>
       <a className="mobile-cta" href={whatsappUrl}><MessageCircle size={18} /> Pedir orçamento</a>
     </div>
   );
