@@ -21,15 +21,17 @@ function waFor(subject: string) {
 
 export default function ServicePage({ config }: { config: ServicePageConfig }) {
   const canonicalPath = `/${config.slug}`;
+  const canonicalUrl = `${site.url.replace(/\/$/, "")}${canonicalPath}`;
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `${canonicalUrl}#service`,
     name: config.title,
     serviceType: config.serviceType,
     description: config.intro,
-    provider: baseLocalBusinessSchema,
+    provider: { "@id": "https://sbshopinformatica.vercel.app/#business" },
     areaServed: baseLocalBusinessSchema.areaServed,
-    url: canonicalPath,
+    url: canonicalUrl,
   };
   const ServiceIcon = config.slug === "assistencia-impressoras" ? Printer : config.slug === "assistencia-notebooks" ? Laptop : Building2;
   const visualNote = config.slug === "assistencia-impressoras" ? "ALIMENTAÇÃO · TINTA · ROTINA" : config.slug === "assistencia-notebooks" ? "SSD · MEMÓRIA · TEMPERATURA" : "PREVENÇÃO · PRIORIDADE · CONTINUIDADE";
