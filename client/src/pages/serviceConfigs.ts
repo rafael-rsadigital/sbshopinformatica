@@ -31,7 +31,7 @@ export const serviceConfigs: Record<string, ServicePageConfig> = {
     bullets: ["Diagnóstico de lentidão, aquecimento e falhas", "Formatação e organização com orientação clara", "Upgrade de SSD e memória conforme a necessidade", "Equipamentos revisados e explicados com transparência"],
     sections: [
       { title: "Nem toda lentidão pede troca", text: "O diagnóstico ajuda a separar problemas de armazenamento, memória, temperatura e configuração antes de decidir por um reparo ou upgrade." },
-      { title: "Upgrade com propósito", text: "SSD e memória fazem sentido quando combinam com o uso que você faz do equipamento. A recomendação deve partir da sua rotina, não de uma lista genérica." },
+      { title: "Upgrade para melhorar o desempenho", text: "SSD e memória fazem sentido quando combinam com o uso que você faz do equipamento. A recomendação deve partir da sua rotina, não de uma lista genérica." },
       { title: "Dados e próximos passos", text: "Antes de qualquer serviço, converse sobre arquivos importantes, acesso ao equipamento e o que precisa ser preservado durante o atendimento." },
     ],
     faq: [
