@@ -1,8 +1,9 @@
-# Tarefas — Exportação para GitHub
+# Tarefas — Correção dos deploys
 
-- [ ] Verificar identidade do GitHub e estado do projeto local.
-- [ ] Criar o repositório privado `sb-shop-informatica-site`.
-- [ ] Configurar autor do Git com o e-mail de atendimento da conta.
-- [ ] Copiar o projeto completo para o repositório e criar o commit inicial.
-- [ ] Enviar o commit para o GitHub e validar a URL remota.
-- [ ] Entregar o link do repositório ao usuário.
+- [x] Clonar e inspecionar o estado atual do repositório GitHub.
+- [x] Revisar os commits recentes de logo, upload e SEO/SSR.
+- [x] Reproduzir localmente o erro de SSR causado pelo Wouter sem Router de servidor.
+- [x] Corrigir hidratação/SSR e migrar a configuração do pnpm para `pnpm-workspace.yaml`.
+- [x] Validar instalação congelada, TypeScript, build, pré-renderização e assets do logotipo.
+- [ ] Enviar o commit de correção ao GitHub.
+- [ ] Relatar o resultado e os próximos passos de deploy.
