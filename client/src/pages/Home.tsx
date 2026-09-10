@@ -119,8 +119,8 @@ export default function Home() {
           <div className="container hero-grid">
             <div className="hero-copy">
               <div className="eyebrow"><span className="eyebrow-dot" /> DIAGNÓSTICO · REPARO · RETOMADA</div>
-              <h1>Seu equipamento volta a trabalhar — <em>sem conversa complicada.</em></h1>
-              <p className="hero-lead">Assistência técnica de informática em Arujá para notebooks, computadores e impressoras. A gente explica o problema, combina o caminho e cuida do resto.</p>
+              <h1>Assistência técnica de informática em Arujá</h1>
+              <p className="hero-lead">Seu equipamento volta a trabalhar — <em>sem conversa complicada.</em> Assistência técnica para notebooks, computadores e impressoras. A gente explica o problema, combina o caminho e cuida do resto.</p>
               <div className="hero-actions">
                 <a className="button button-primary" href={whatsappUrl}><MessageCircle size={19} /> Pedir orçamento pelo WhatsApp</a>
                 <a className="text-link" href={mapsUrl} target="_blank" rel="noreferrer">Ver no Google Maps <ArrowUpRight size={16} /></a>
@@ -157,7 +157,7 @@ export default function Home() {
 
         <section className="services-section" id="servicos">
           <div className="container">
-            <div className="section-heading split-heading"><div><span className="section-label">SERVIÇOS / 01—04</span><h2>Do sintoma ao reparo,<br /><em>sem atalhos.</em></h2></div><p>Nem todo equipamento precisa ser trocado. Às vezes, precisa de diagnóstico, cuidado e uma decisão bem explicada.</p></div>
+            <div className="section-heading split-heading"><div><span className="section-label">SERVIÇOS / 01—04</span><h2>Serviços de assistência técnica em Arujá</h2></div><p>Do sintoma ao reparo, sem atalhos. Nem todo equipamento precisa ser trocado. Às vezes, precisa de diagnóstico, cuidado e uma decisão bem explicada.</p></div>
             <div className="services-grid">
               {services.map((service) => {
                 const Icon = service.icon;
