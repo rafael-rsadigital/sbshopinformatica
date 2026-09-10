@@ -5,7 +5,7 @@ export const site = {
   legalName: "Assistência Técnica S.B Shop Informática",
   description:
     "Assistência técnica de informática em Arujá para notebooks, computadores e impressoras.",
-  url: "https://sbshopinfo-nryfymm8.manus.space",
+  url: "https://sbshopinformatica.vercel.app/",
   phone: "+55 11 3754-0839",
   phoneDisplay: "(11) 3754-0839",
   whatsapp: "https://wa.me/551137540839?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento.",
@@ -27,10 +27,12 @@ export const site = {
 export const baseLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ComputerStore",
+  "@id": "https://sbshopinformatica.vercel.app/#business",
   name: site.name,
   alternateName: site.legalName,
   description: site.description,
-  image: site.logo,
+  image: "https://sbshopinformatica.vercel.app/images/logotipo-fundo-transparente.png",
+  logo: "https://sbshopinformatica.vercel.app/images/logotipo-fundo-transparente.png",
   telephone: site.phone,
   url: site.url,
   priceRange: "$$",
@@ -76,7 +78,7 @@ export function breadcrumbSchema(items: Array<{ name: string; url: string }>) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: item.url,
+      item: item.url.startsWith("http") ? item.url : `${site.url.replace(/\/$/, "")}${item.url}`,
     })),
   };
 }
