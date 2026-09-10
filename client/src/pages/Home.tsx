@@ -19,12 +19,24 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import SeoHead from "@/components/SeoHead";
+import { baseLocalBusinessSchema, breadcrumbSchema, faqSchema, site } from "@/lib/seo";
 
-const mapsUrl =
-  "https://www.google.com/maps/place/ASSISTENCIA+TECNICA+S.B+SHOP+INFORMATICA/@-23.3942493,-46.3196292,820m/data=!3m1!1e3!4m7!3m6!1s0x94ce877e661519e3:0xaf7867d84b130632!8m2!3d-23.3942493!4d-46.3196292!10e1!16s%2Fg%2F1tfbv03k?entry=ttu";
+const mapsUrl = site.mapsUrl;
 const whatsappUrl =
   "https://wa.me/551137540839?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento.";
 const phoneUrl = "tel:+551137540839";
+const homeFaq = [
+  { question: "A SB Shop atende quais equipamentos?", answer: "A SB Shop Informática atende notebooks, computadores e impressoras em Arujá, com diagnóstico e orientação antes da execução do serviço." },
+  { question: "Como pedir um orçamento?", answer: "Você pode falar pelo WhatsApp, informar o equipamento e explicar o sintoma para receber orientação sobre o próximo passo." },
+  { question: "Onde fica a assistência técnica?", answer: "A SB Shop Informática fica na Rua Zeferino Barbosa de Souza, 130, Jardim Renata, em Arujá/SP." },
+];
+
+const homeSchemas = [
+  baseLocalBusinessSchema,
+  faqSchema(homeFaq),
+  breadcrumbSchema([{ name: "Início", url: "/" }]),
+];
 
 const services = [
   {
@@ -69,6 +81,12 @@ export default function Home() {
 
   return (
     <div className="site-shell">
+      <SeoHead
+        title="SB Shop Informática | Assistência técnica em Arujá"
+        description="Assistência técnica de notebooks, computadores e impressoras em Arujá/SP. Diagnóstico claro, orçamento antes do serviço e atendimento local."
+        canonicalPath="/"
+        schemas={homeSchemas}
+      />
       <div className="topline">
         <div className="container topline-inner">
           <span>ASSISTÊNCIA TÉCNICA DE INFORMÁTICA · ARUJÁ/SP</span>
@@ -79,7 +97,8 @@ export default function Home() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#inicio" aria-label="SB Shop Informática — início">
-            <img className="brand-logo" src="/images/logotipo-fundo-transparente.png" alt="SB Shop Informática" width="56" height="56" />
+            <img src="/images/logotipo-fundo-transparente.png" alt="" className="brand-mark" />
+            <span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span>
           </a>
           <button className="menu-toggle" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}>
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -113,7 +132,7 @@ export default function Home() {
             </div>
             <div className="hero-visual">
               <div className="hero-photo-frame">
-                <img src="/images/sb-shop-hero-workbench.webp" alt="Bancada organizada para manutenção de um notebook" width="1280" height="720" fetchPriority="high" />
+                <img src="/images/sb-shop-hero-workbench.webp" alt="Bancada organizada para manutenção de um notebook" />
                 <div className="photo-caption"><span>NA BANCADA</span><strong>Precisão que acolhe.</strong></div>
               </div>
               <div className="rating-stamp" aria-label="4,7 de 5 estrelas em 110 avaliações no Google">
@@ -144,7 +163,7 @@ export default function Home() {
                 const Icon = service.icon;
                 return <article className={`service-card service-${service.accent}`} key={service.number}>
                   <div className="card-top"><span>{service.number}</span><Icon size={23} strokeWidth={1.6} /></div>
-                  <h3>{service.title}</h3><p>{service.text}</p><a href={whatsappUrl}>Conversar sobre isso <ChevronRight size={16} /></a>
+                  <h3>{service.title}</h3><p>{service.text}</p><a href={service.number === "01" ? "/assistencia-notebooks" : service.number === "02" ? "/assistencia-impressoras" : service.number === "03" ? "/assistencia-notebooks" : "/contrato-manutencao-empresarial"}>Ver página do serviço <ChevronRight size={16} /></a>
                 </article>;
               })}
             </div>
@@ -153,7 +172,7 @@ export default function Home() {
 
         <section className="feature-section">
           <div className="container feature-grid">
-            <div className="feature-image"><img src="/images/sb-shop-product-laptop.webp" alt="Notebook revisado sobre bancada de assistência técnica" width="800" height="600" loading="lazy" /><span className="image-tag">REVISADO / TESTADO</span></div>
+            <div className="feature-image"><img src="/images/sb-shop-product-laptop.webp" alt="Notebook revisado sobre bancada de assistência técnica" /><span className="image-tag">REVISADO / TESTADO</span></div>
             <div className="feature-copy"><span className="section-label">TAMBÉM TEMOS</span><h2>Tecnologia usada pode ser uma escolha <em>inteligente.</em></h2><p>Quando há notebooks revisados disponíveis, você recebe informação sobre a condição do equipamento, orientação para escolher e um caminho de compra mais tranquilo.</p><div className="feature-list"><span><ShieldCheck size={18} /> Estado explicado com honestidade</span><span><Cpu size={18} /> Configuração para a sua necessidade</span><span><Check size={18} /> Garantia e condições informadas</span></div><a className="button button-dark" href={whatsappUrl}>Consultar disponibilidade <ArrowUpRight size={17} /></a></div>
           </div>
         </section>
@@ -165,15 +184,17 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="faq-section home-faq"><div className="container faq-grid"><div><span className="section-label">DÚVIDAS FREQUENTES</span><h2>Antes de trazer, você pode perguntar.</h2></div><div className="faq-list">{homeFaq.map((item) => <details key={item.question}><summary>{item.question}<ChevronRight size={17} /></summary><p>{item.answer}</p></details>)}</div></div></section>
+
         <section className="contact-section" id="contato">
           <div className="container contact-grid">
             <div><span className="section-label light-label">ONDE ESTAMOS</span><h2>Explique o problema.<br /><em>A gente cuida do resto.</em></h2><p>Rua Zeferino Barbosa de Souza, 130<br />Jardim Renata · Arujá — SP</p><div className="contact-actions"><a className="button button-orange" href={whatsappUrl}><MessageCircle size={19} /> Falar no WhatsApp</a><a className="contact-phone" href={phoneUrl}><Phone size={17} /> (11) 3754-0839</a></div></div>
-            <div className="map-card"><div className="map-pin"><MapPin size={24} /></div><div className="map-label"><strong>SB SHOP</strong><span>ASSISTÊNCIA TÉCNICA</span></div><div className="map-line line-one" /><div className="map-line line-two" /><div className="map-line line-three" /><a href={mapsUrl} target="_blank" rel="noreferrer">Abrir rota no Google Maps <ArrowUpRight size={15} /></a></div>
+            <div className="map-card"><iframe title="Localização da SB Shop Informática no Google Maps" src={site.mapsEmbedUrl} width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" /><a className="map-overlay-link" href={mapsUrl} target="_blank" rel="noreferrer">Ver no Google Maps <ArrowUpRight size={15} /></a></div>
           </div>
         </section>
       </main>
 
-      <footer className="site-footer"><div className="container footer-inner"><div className="brand footer-brand"><img className="brand-logo" src="/images/logotipo-fundo-transparente.png" alt="SB Shop Informática" width="52" height="52" /></div><div className="footer-meta"><span><Clock3 size={14} /> Seg a sex · 08:30 às 17:30</span><a href="https://www.instagram.com/sb_shopinformatica/" target="_blank" rel="noreferrer"><Instagram size={15} /> @sb_shopinformatica</a></div><span className="footer-note">Feito para a rotina voltar a funcionar.</span></div></footer>
+      <footer className="site-footer"><div className="container footer-inner footer-inner-expanded"><div className="brand footer-brand"><img src={site.logo} alt="" className="brand-mark" /><span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span></div><address className="footer-nap"><strong>{site.legalName}</strong><span>{site.address.street} · {site.address.neighborhood} · {site.address.city}/{site.address.region}</span><a href={phoneUrl}>{site.phoneDisplay}</a></address><nav className="footer-services" aria-label="Páginas de serviço"><a href="/assistencia-notebooks">Assistência para notebooks</a><a href="/assistencia-impressoras">Assistência para impressoras</a><a href="/contrato-manutencao-empresarial">Manutenção para empresas</a></nav><div className="footer-meta"><span><Clock3 size={14} /> {site.hours}</span><a href={site.instagram} target="_blank" rel="noreferrer"><Instagram size={15} /> @sb_shopinformatica</a></div><span className="footer-note">Feito para a rotina voltar a funcionar.</span></div></footer>
       <a className="mobile-cta" href={whatsappUrl}><MessageCircle size={18} /> Pedir orçamento</a>
     </div>
   );
