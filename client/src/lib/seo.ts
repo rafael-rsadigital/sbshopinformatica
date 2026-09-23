@@ -19,20 +19,23 @@ export const site = {
   hours: "Segunda a sexta, das 08:30 às 17:30",
   mapsUrl: "https://maps.app.goo.gl/K3fwKVh8CWYQPmm2A",
   mapsEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.6401087335853!2d-46.3196292!3d-23.3942493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce877e661519e3%3A0xaf7867d84b130632!2sAssist%C3%AAncia%20T%C3%A9cnica%20S.B%20Shop%20Inform%C3%A1tica!5e1!3m2!1spt-BR!2sbr!4v1789060459185!5m2!1spt-BR!2sbr",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3213.6401087335853!2d-46.3196292!3d-23.3942493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce877e661519e3%3A0xaf7867d84b130632!2sAssist%C3%AAncia%20T%C3%A9cnica%20S.B%20Shop%20Inform%C3%A1tica!5e1!3m2!1i1024!2i768!4f13.1!5m2!1spt-BR!2sbr",
   instagram: "https://www.instagram.com/sb_shopinformatica/",
   logo: "/images/logotipo-fundo-transparente.png",
 };
 
+const businessId = `${site.url.replace(/\/$/, "")}/#business`;
+const absoluteLogo = `${site.url.replace(/\/$/, "")}${site.logo}`;
+
 export const baseLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ComputerStore",
-  "@id": "https://sbshopinformatica.vercel.app/#business",
+  "@id": businessId,
   name: site.name,
   alternateName: site.legalName,
   description: site.description,
-  image: "https://sbshopinformatica.vercel.app/images/logotipo-fundo-transparente.png",
-  logo: "https://sbshopinformatica.vercel.app/images/logotipo-fundo-transparente.png",
+  image: absoluteLogo,
+  logo: absoluteLogo,
   telephone: site.phone,
   url: site.url,
   priceRange: "$$",
