@@ -1,0 +1,34 @@
+# SB Shop Informática
+
+> Assistência técnica de informática em Arujá e região, com serviços para notebooks, computadores, impressoras e empresas.
+
+## Páginas principais
+
+- [Página inicial](https://sbshopinformatica.vercel.app/)
+- [Assistência técnica para notebooks](https://sbshopinformatica.vercel.app/assistencia-notebooks)
+- [Assistência técnica para impressoras](https://sbshopinformatica.vercel.app/assistencia-impressoras)
+- [Contrato de manutenção de informática para empresas](https://sbshopinformatica.vercel.app/contrato-manutencao-empresarial)
+- [Região de atendimento](https://sbshopinformatica.vercel.app/regiao-atendimento)
+
+## Empresa
+
+A SB Shop Informática é uma assistência técnica de informática localizada em Arujá, São Paulo.
+
+- Endereço: Rua Zeferino Barbosa de Souza, 130, Jardim Renata, Arujá - SP
+- Telefone: (11) 3754-0839
+
+## Serviços
+
+- Assistência técnica para notebooks
+- Assistência técnica para impressoras
+- Manutenção de informática
+- Contrato de manutenção de informática para empresas
+
+## Área de atendimento
+
+A SB Shop Informática atende Arujá e cidades da região, incluindo Guarulhos, Itaquaquecetuba, Mogi das Cruzes e Santa Isabel.
+
+## Informações de atendimento
+
+- Segunda a sexta-feira, das 08:30 às 17:30.
+- Para informações sobre serviços, orçamento e atendimento, consulte o site ou entre em contato diretamente com a empresa.
