@@ -4,7 +4,7 @@ export const site = {
   name: "SB Shop Informática",
   legalName: "Assistência Técnica S.B Shop Informática",
   description:
-    "Assistência técnica de informática em Arujá para notebooks, computadores e impressoras.",
+    "Assistência técnica para impressoras em Arujá, com atendimento também para nobreaks, notebooks e computadores.",
   url: "https://sbshopinformatica.vercel.app/",
   phone: "+55 11 3754-0839",
   phoneDisplay: "(11) 3754-0839",
