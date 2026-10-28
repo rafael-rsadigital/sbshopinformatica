@@ -17,8 +17,9 @@ const homeFaq = [
 const homeSchemas = [baseLocalBusinessSchema, faqSchema(homeFaq), breadcrumbSchema([{ name: "Início", url: "/" }])];
 
 const services = [
-  { number: "01", icon: MonitorCog, title: "Notebook & computador", text: "Diagnóstico, formatação, limpeza, upgrade de SSD e memória para devolver velocidade à rotina.", accent: "cobalt", href: "/assistencia-notebooks" },
-  { number: "02", icon: Printer, title: "Impressoras", text: "Manutenção e reparos para impressoras que falham, travam ou não entregam a qualidade de antes.", accent: "orange", href: "/assistencia-impressoras" },
+  { number: "01", icon: Printer, title: "Assistência para impressoras", text: "Diagnóstico e manutenção de impressoras com falhas de impressão, atolamentos, erros ou problemas de alimentação de papel.", accent: "orange", href: "/assistencia-impressoras" },
+  { number: "02", icon: HardDrive, title: "Nobreaks", text: "Avaliação de nobreaks com baixa autonomia, falhas de bateria ou desligamentos. Consulte os modelos atendidos.", accent: "cobalt", href: "/assistencia-nobreaks" },
+  { number: "03", icon: MonitorCog, title: "Informática em geral", text: "Assistência para notebooks e computadores, com diagnóstico, manutenção e upgrades conforme a necessidade.", accent: "cobalt", href: "/assistencia-notebooks" },
   { number: "03", icon: HardDrive, title: "Equipamentos revisados", text: "Notebooks usados e revisados, com orientação clara sobre estado, condição e garantia.", accent: "cobalt", href: "/assistencia-notebooks" },
   { number: "04", icon: Wrench, title: "Orçamento sem surpresa", text: "A gente explica o problema e aprova o serviço antes de começar. Mais clareza, menos susto.", accent: "orange", href: "#contato" },
 ];
@@ -36,8 +37,8 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="site-shell">
-      <SeoHead title="SB Shop Informática | Assistência técnica em Arujá e região" description="Assistência técnica de notebooks, computadores e impressoras em Arujá e região. Atendimento para Arujá, Guarulhos, Itaquaquecetuba, Mogi das Cruzes e Santa Isabel." canonicalPath="/" schemas={homeSchemas} />
-      <div className="topline"><div className="container topline-inner"><span>ASSISTÊNCIA TÉCNICA DE INFORMÁTICA · ARUJÁ E REGIÃO</span><a href={phoneUrl}>(11) 3754-0839</a></div></div>
+      <SeoHead title="SB Shop Informática | Assistência técnica em Arujá e região" description="Assistência técnica para impressoras e nobreaks em Arujá e região. Também atendemos notebooks e computadores. Consulte a disponibilidade pelo WhatsApp." canonicalPath="/" schemas={homeSchemas} />
+      <div className="topline"><div className="container topline-inner"><span>ASSISTÊNCIA PARA IMPRESSORAS · NOBREAKS · ARUJÁ</span><a href={phoneUrl}>(11) 3754-0839</a></div></div>
       <header className="site-header"><div className="container header-inner">
         <a className="brand" href="#inicio" aria-label="SB Shop Informática — início"><img src="/images/logotipo-fundo-transparente.png" alt="" className="brand-mark" /><span className="brand-wordmark"><strong>SB SHOP</strong><small>INFORMÁTICA</small></span></a>
         <button className="menu-toggle" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen}>{menuOpen ? <X size={22} /> : <Menu size={22} />}</button>
@@ -48,7 +49,7 @@ export default function Home() {
 
       <main id="inicio">
         <section className="hero-section"><div className="hero-texture" aria-hidden="true" /><div className="container hero-grid">
-          <div className="hero-copy"><div className="eyebrow"><span className="eyebrow-dot" /> DIAGNÓSTICO · REPARO · RETOMADA</div><h1>Assistência técnica de informática em Arujá</h1><p className="hero-lead">Seu equipamento volta a trabalhar — <em>sem conversa complicada.</em> Assistência técnica para notebooks, computadores e impressoras em Arujá e região. A gente explica o problema, combina o caminho e cuida do resto.</p><div className="hero-actions"><a className="button button-primary" href={whatsappUrl}><MessageCircle size={19} /> Pedir orçamento pelo WhatsApp</a><a className="text-link" href={mapsUrl} target="_blank" rel="noreferrer">Ver no Google Maps <ArrowUpRight size={16} /></a></div><div className="hero-notes"><span><Check size={15} /> Orçamento antes do serviço</span><span><Check size={15} /> Atendimento em Arujá e região</span></div></div>
+          <div className="hero-copy"><div className="eyebrow"><span className="eyebrow-dot" /> DIAGNÓSTICO · REPARO · RETOMADA</div><h1>Assistência técnica para impressoras em Arujá</h1><p className="hero-lead">Seu equipamento volta a trabalhar — <em>sem conversa complicada.</em> Assistência técnica para notebooks, computadores e impressoras em Arujá e região. A gente explica o problema, combina o caminho e cuida do resto.</p><div className="hero-actions"><a className="button button-primary" href={whatsappUrl}><MessageCircle size={19} /> Pedir orçamento pelo WhatsApp</a><a className="text-link" href={mapsUrl} target="_blank" rel="noreferrer">Ver no Google Maps <ArrowUpRight size={16} /></a></div><div className="hero-notes"><span><Check size={15} /> Orçamento antes do serviço</span><span><Check size={15} /> Atendimento em Arujá e região</span></div></div>
           <div className="hero-visual"><div className="hero-photo-frame"><img src="/images/sb-shop-hero-workbench.webp" alt="Bancada organizada para manutenção de um notebook" /><div className="photo-caption"><span>NA BANCADA</span><strong>Serviço técnico, sem complicação.</strong></div></div><div className="rating-stamp" aria-label="4,7 de 5 estrelas em 110 avaliações no Google"><Star size={15} fill="currentColor" /><strong>4,7</strong><span>110 avaliações<br />no Google</span></div><div className="hero-index">SB<span> / 01</span></div></div>
         </div></section>
 
