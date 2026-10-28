@@ -13,6 +13,7 @@ const { render, getSeo } = await import(pathToFileURL(serverEntry).href);
 const routes = [
   "/",
   "/assistencia-notebooks",
+  "/assistencia-nobreaks",
   "/assistencia-impressoras",
   "/contrato-manutencao-empresarial",
   "/regiao-atendimento",
