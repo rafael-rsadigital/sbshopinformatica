@@ -16,6 +16,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/assistencia-impressoras"><ServicePage config={serviceConfigs["assistencia-impressoras"]} /></Route>
       <Route path="/assistencia-notebooks"><ServicePage config={serviceConfigs["assistencia-notebooks"]} /></Route>
+      <Route path="/assistencia-nobreaks"><ServicePage config={serviceConfigs["assistencia-nobreaks"]} /></Route>
       <Route path="/contrato-manutencao-empresarial"><ServicePage config={serviceConfigs["contrato-manutencao-empresarial"]} /></Route>
       <Route path="/regiao-atendimento" component={RegiaoAtendimento} />
       <Route path="/404" component={NotFound} />
