@@ -21,6 +21,25 @@ export const serviceConfigs: Record<string, ServicePageConfig> = {
       { question: "Vocês fazem contrato de manutenção para empresas?", answer: "Podemos conversar sobre a necessidade da sua empresa e avaliar um formato de manutenção recorrente conforme os equipamentos e a rotina de uso." },
     ],
   },
+  "assistencia-nobreaks": {
+    slug: "assistencia-nobreaks",
+    eyebrow: "NOBREAKS · ENERGIA · PROTEÇÃO",
+    title: "Assistência técnica para nobreaks em Arujá",
+    intro: "Seu nobreak não mantém a carga, desliga sozinho ou apresenta sinal de falha? Entre em contato com a SB Shop Informática para consultar a avaliação do equipamento e a disponibilidade do serviço.",
+    accent: "cobalt",
+    serviceType: "Assistência técnica e manutenção de nobreaks",
+    bullets: ["Relato de falhas de autonomia e desligamento", "Orientação conforme marca e modelo", "Avaliação da necessidade de verificar bateria ou funcionamento", "Confirmação prévia sobre os modelos atendidos"],
+    sections: [
+      { title: "Quando a autonomia diminui", text: "Se o nobreak deixa de manter os equipamentos ligados como antes, informe o modelo, a idade aproximada e o que acontece durante uma queda de energia." },
+      { title: "Diagnóstico antes de decidir", text: "Sintomas diferentes podem ter causas diferentes. A avaliação deve orientar os próximos passos, sem presumir que toda falha seja apenas bateria." },
+      { title: "Proteção para a rotina", text: "Para escolher ou manter um nobreak, considere os equipamentos conectados, a carga necessária e o tempo de autonomia esperado." },
+    ],
+    faq: [
+      { question: "Meu nobreak desliga rápido. Pode ser a bateria?", answer: "A bateria é uma possibilidade, mas não é a única causa. Envie marca, modelo e uma descrição do comportamento para consultar a avaliação." },
+      { question: "Vocês atendem qualquer marca de nobreak?", answer: "A disponibilidade depende da marca, do modelo e do tipo de falha. Consulte antes de levar o equipamento." },
+      { question: "Como pedir orientação?", answer: "Entre em contato pelo WhatsApp e informe a marca, o modelo, os equipamentos conectados e o sintoma apresentado." },
+    ],
+  },
   "assistencia-notebooks": {
     slug: "assistencia-notebooks",
     eyebrow: "NOTEBOOKS · COMPUTADORES · PERFORMANCE",
