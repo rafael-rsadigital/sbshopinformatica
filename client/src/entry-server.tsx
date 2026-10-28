@@ -49,8 +49,8 @@ function serviceSchema(slug: string) {
 
 export function getSeo(path: string) {
   if (path === "/") {
-    const title = "SB Shop Informática | Assistência técnica em Arujá e região";
-    const description = "Assistência técnica de notebooks, computadores e impressoras em Arujá e região. Atendimento para Arujá, Guarulhos, Itaquaquecetuba, Mogi das Cruzes e Santa Isabel.";
+    const title = "SB Shop Informática | Assistência para impressoras em Arujá";
+    const description = "Assistência técnica para impressoras e nobreaks em Arujá e região. Também atendemos notebooks e computadores. Consulte a disponibilidade pelo WhatsApp.";
     return {
       title,
       description,
